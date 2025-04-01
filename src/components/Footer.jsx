@@ -38,7 +38,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#58130a] transition">
+                <a href="contact" className="hover:text-[#58130a] transition">
                   Contact
                 </a>
               </li>

@@ -2,6 +2,7 @@ import { Recursive } from 'next/font/google'
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { ToastContainer } from 'react-toastify';
 
 
 const recursive = Recursive({ subsets: ['latin'] })
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={recursive.className}>
         <Navbar />
+        <ToastContainer position="top-right" theme="light" autoClose={3000}/>
         {children}
         <Footer />
       </body>
