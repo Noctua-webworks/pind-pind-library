@@ -2,16 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaBook, FaHandsHelping, FaGlobe, FaUsers, FaCheckCircle } from "react-icons/fa";
+import { FaHandsHelping, FaGlobe, FaUsers, FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
+import MotionButton from "@/components/MotionButton";
 
 export default function AboutUs() {
-    const router = useRouter();
-
-    const handleClick = () => {
-        router.push("/contact");
-    };
 
     return (
         <div className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
@@ -117,8 +112,6 @@ export default function AboutUs() {
                 </div>
             </section>
 
-
-
             {/* Call to Action */}
             <section className="bg-[#58130a] text-white text-center py-20">
                 <motion.div
@@ -130,14 +123,7 @@ export default function AboutUs() {
                     <p className="mt-4 text-lg max-w-3xl mx-auto">
                         Be a part of our mission. Donate books, volunteer, or help us spread the word.
                     </p>
-                    <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                        className="cursor-pointer mt-6 px-6 py-3 bg-white text-[#58130a] font-semibold rounded-lg shadow-lg"
-                        onClick={handleClick}
-                    >
-                        Get Involved
-                    </motion.button>
+                    <MotionButton title="Get Involved" />
                 </motion.div>
             </section>
         </div>
