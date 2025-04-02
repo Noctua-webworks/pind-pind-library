@@ -1,13 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./DropDownMenu";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+  const pathname = usePathname(); 
 
   const toggleDropDown = () => {
     setIsDropDownVisible(!isDropDownVisible);
@@ -16,6 +18,12 @@ const Navbar = () => {
   const closeDropDown = () => {
     setIsDropDownVisible(false);
   };
+
+    // Close dropdown when route changes
+    useEffect(() => {
+      closeDropDown();
+    }, [pathname]);
+  
 
   return (
     <>
@@ -34,7 +42,7 @@ const Navbar = () => {
                 alt="Logo"
                 width={200}
                 height={200}
-                className="w-10 h-10 md:w-24 md:h-24"
+                className="w-14 h-14 md:w-24 md:h-24"
               />
             </Link>
           </div>

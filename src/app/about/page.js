@@ -4,8 +4,15 @@ import React from "react";
 import Image from "next/image";
 import { FaBook, FaHandsHelping, FaGlobe, FaUsers, FaCheckCircle } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function AboutUs() {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push("/contact");
+    };
+
     return (
         <div className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
             {/* Hero Section */}
@@ -41,12 +48,12 @@ export default function AboutUs() {
 
             {/* Why We Started */}
             <section className="bg-white dark:bg-gray-800 py-20 px-6">
-                <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div className="container mx-auto flex flex-col md:flex-row items-center gap-12 justify-center">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
-                        className="w-full md:w-1/2"
+                        className="w-full md:w-[35%]"
                     >
                         <h2 className="text-4xl font-bold">Why We Started</h2>
                         <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
@@ -57,14 +64,14 @@ export default function AboutUs() {
                     <motion.div
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
-                        className="w-full md:w-1/2"
+                        className="w-full md:w-[35%]"
                     >
                         <Image
                             src="/images/library.jpg"
                             width={500}
                             height={300}
                             alt="Library in a village"
-                            className="rounded-lg shadow-lg"
+                            className="rounded-lg shadow-lg w-full"
                         />
                     </motion.div>
                 </div>
@@ -126,7 +133,8 @@ export default function AboutUs() {
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
-                        className="mt-6 px-6 py-3 bg-white text-[#58130a] font-semibold rounded-lg shadow-lg"
+                        className="cursor-pointer mt-6 px-6 py-3 bg-white text-[#58130a] font-semibold rounded-lg shadow-lg"
+                        onClick={handleClick}
                     >
                         Get Involved
                     </motion.button>

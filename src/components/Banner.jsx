@@ -64,7 +64,7 @@ export function Banner() {
 
               <div className="mt-12 flex flex-col sm:flex-row items-center sm:items-start gap-5">
                 <Link
-                  href="#start-library"
+                  href="/contact"
                   className="px-6 py-3 text-lg font-semibold text-white bg-[#58130a] rounded-lg hover:bg-[#cf7b70] transition"
                 >
                   Start a Library

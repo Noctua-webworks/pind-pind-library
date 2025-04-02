@@ -20,7 +20,7 @@ export function JoinMissionSection() {
           💡 Together, we can create a future where knowledge is within
           everyone’s reach.
         </p>
-        <Link href="/get-involved">
+        <Link href="/contact">
           <button className="mt-6 px-6 py-3 bg-[#58130a] text-white font-semibold rounded-lg shadow-md hover:bg-[#741300] transition-all">
             👉 Join the Mission Today!
           </button>

@@ -8,19 +8,19 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const Scholars = () => {
   const images = [
     {
-      src: "/images/scholars/hari-singh-nalwa.jpg",
-      title: "Hari Singh Nalwa",
-      subtitle: "(The Great Scholar and Warrior)",
+      src: "/images/scholars/dr-babasaheb-ambedkar.avif",
+      title: "Dr. B.R. Ambedkar",
+      subtitle: "~ Be educated, be agitated, be organized, be confident, never give up, these are the five principles of our life.",
     },
     {
-      src: "/images/scholars/hari-singh-nalwa.jpg",
-      title: "Hari Singh Nalwa",
-      subtitle: "(The Great Scholar and Warrior)",
+      src: "/images/scholars/bhagatsinghsar.jpg",
+      title: "Bhagat Singh",
+      subtitle: "~ Lovers, lunatics, and poets are made of the same stuff.",
     },
     {
-      src: "/images/scholars/hari-singh-nalwa.jpg",
-      title: "Hari Singh Nalwa",
-      subtitle: "(The Great Scholar and Warrior)",
+      src: "/images/scholars/abdul_k.jpg",
+      title: "APJ Abdul Kalam",
+      subtitle: "~ Education is the key to unlocking the world, a passport to freedom.",
     },
     {
       src: "/images/scholars/hari-singh-nalwa.jpg",
