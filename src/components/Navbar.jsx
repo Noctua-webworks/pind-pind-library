@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AlignJustify, X } from "lucide-react";
+import { AlignJustify, X, ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./DropDownMenu";
@@ -9,7 +9,8 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
-  const pathname = usePathname(); 
+  const [isDonationMenuOpen, setIsDonationMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleDropDown = () => {
     setIsDropDownVisible(!isDropDownVisible);
@@ -19,17 +20,20 @@ const Navbar = () => {
     setIsDropDownVisible(false);
   };
 
-    // Close dropdown when route changes
-    useEffect(() => {
-      closeDropDown();
-    }, [pathname]);
-  
+  const toggleDonationMenu = () => {
+    setIsDonationMenuOpen(!isDonationMenuOpen);
+  };
+
+  useEffect(() => {
+    closeDropDown();
+    setIsDonationMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
       {/* Navbar */}
       <div className="sticky top-0 inset-x-0 z-[50] w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
-        <div className="p-6 md:p-2 md:px-6 flex items-center justify-between">
+        <div className="p-2 px-4 md:p-2 md:px-6 flex items-center justify-between">
           {/* Logo */}
           <div>
             <Link
@@ -38,26 +42,60 @@ const Navbar = () => {
             >
               <Image
                 priority
-                src="/images/logo.png"
+                src="/images/logoblack.png"
                 alt="Logo"
                 width={200}
                 height={200}
-                className="w-14 h-14 md:w-24 md:h-24"
+                className="w-20 h-20 md:w-20 md:h-20"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-10 text-black items-center text-center bg-clip-text">
-            <Link href={"/"} className="hover:text-[#902617] cursor-pointer">
+          <div className="hidden md:flex space-x-10 text-black items-center text-center bg-clip-text relative">
+            <Link href="/" className="hover:text-[#902617] cursor-pointer">
               Home
             </Link>
-            <Link
-              href={"about"}
-              className="hover:text-[#902617] cursor-pointer"
-            >
+            <Link href="/about" className="hover:text-[#902617] cursor-pointer">
               About us
             </Link>
+            <Link href="/volunteer" className="hover:text-[#902617] cursor-pointer">
+              Volunteer
+            </Link>
+
+            {/* Donation Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleDonationMenu}
+                className="flex items-center gap-1 hover:text-[#902617] cursor-pointer focus:outline-none"
+              >
+                Donation
+                {isDonationMenuOpen ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </button>
+
+              {isDonationMenuOpen && (
+                <div className="absolute bg-white shadow-md p-2 rounded-md mt-2 space-y-2 min-w-[200px] z-50">
+                  <Link
+                    href="/donate-money"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={() => setIsDonationMenuOpen(false)}
+                  >
+                    Monetary donation
+                  </Link>
+                  <Link
+                    href="/donate-books"
+                    className="block px-4 py-2 text-sm hover:bg-gray-100"
+                    onClick={() => setIsDonationMenuOpen(false)}
+                  >
+                    Books donation
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Navigation */}
@@ -66,14 +104,14 @@ const Navbar = () => {
               <div className="relative">
                 <X
                   onClick={toggleDropDown}
-                  className="w-8 h-8 text-slate-300 cursor-pointer"
+                  className="w-8 h-8 text-gray-900 cursor-pointer"
                 />
                 <DropDownMenu onClose={closeDropDown} />
               </div>
             ) : (
               <AlignJustify
                 onClick={toggleDropDown}
-                className="w-8 h-8 text-slate-300 cursor-pointer"
+                className="w-8 h-8 text-gray-900 cursor-pointer"
               />
             )}
           </div>

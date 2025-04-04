@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import {
   FaFacebookF,
@@ -25,22 +26,22 @@ export function Footer() {
             <h3 className="text-2xl font-bold">Quick Links</h3>
             <ul className="mt-3 space-y-2 text-gray-700">
               <li>
-                <a href="#about" className="hover:text-[#58130a] transition">
+                <Link href="/about" className="hover:text-[#58130a] transition">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contribute"
+                <Link
+                  href="/donate-money"
                   className="hover:text-[#58130a] transition"
                 >
                   How to Contribute
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="contact" className="hover:text-[#58130a] transition">
+                <Link href="/contact" className="hover:text-[#58130a] transition">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
