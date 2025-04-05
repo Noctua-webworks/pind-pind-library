@@ -53,7 +53,7 @@ export function Footer() {
                 { icon: FaFacebookF, link: "#" },
                 { icon: FaInstagram, link: "#" },
                 { icon: FaTwitter, link: "#" },
-                { icon: FaEnvelope, link: "#" },
+                { icon: FaEnvelope, link: "mailto:pindpindlibraryfoundation@gmail.com" },
               ].map((item, index) => (
                 <a
                   key={index}
