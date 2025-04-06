@@ -6,7 +6,7 @@ export default async function DonateMoneyPage() {
   // Static data (SSG) – you could fetch from a CMS or DB here if needed
   const bankDetails = {
     bankName: 'State Bank of India',
-    accountHolder: 'Village Village Library Foundation',
+    accountHolder: 'Pind Pind Library Foundation',
     accountNumber: '123456789012',
     ifsc: 'SBIN0001234',
     branch: 'Main City Branch',

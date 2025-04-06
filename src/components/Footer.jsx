@@ -50,14 +50,15 @@ export function Footer() {
             <h3 className="text-2xl font-bold">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4 mt-4">
               {[
-                { icon: FaFacebookF, link: "#" },
-                { icon: FaInstagram, link: "#" },
-                { icon: FaTwitter, link: "#" },
+                { icon: FaFacebookF, link: "https://www.facebook.com/PindPindLibrary" },
+                { icon: FaInstagram, link: "https://www.instagram.com/pindpindlibrary" },
+                // { icon: FaTwitter, link: "#" },
                 { icon: FaEnvelope, link: "#" },
               ].map((item, index) => (
                 <a
                   key={index}
                   href={item.link}
+                  target="_blank"
                   className="p-3 bg-[#58130a] rounded-full text-white hover:bg-opacity-80 transition"
                 >
                   <item.icon className="w-5 h-5" />

@@ -66,7 +66,7 @@ export function AboutSection() {
 
         {/* Description */}
         <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Village Village Library is a movement to bring knowledge closer to people by setting up 
+          Pind Pind Library is a movement to bring knowledge closer to people by setting up 
           libraries in religious places. Our mission is to promote a reading culture and 
           make books accessible to everyone, starting with 100+ villages.
         </p>
