@@ -22,7 +22,7 @@ const Scholars = () => {
       src: "/images/scholars/kahan-singh-nabha.jpeg",
       title: "Kahan Singh Nabha",
       subtitle:
-        "~ Education is the key to unlocking the world, a passport to freedom.",
+        "(Sikh Scholar and Encyclopedist)",
     },
     {
       src: "/images/scholars/dr-babasaheb-ambedkar.avif",

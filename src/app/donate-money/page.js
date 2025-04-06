@@ -2,6 +2,10 @@
 
 import React from 'react';
 
+export const metadata = {
+  title: 'Monetary donation - Pind Pind Library',
+};
+
 export default async function DonateMoneyPage() {
   // Static data (SSG) – you could fetch from a CMS or DB here if needed
   const bankDetails = {
