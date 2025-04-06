@@ -28,10 +28,8 @@ const DropDownMenu = ({ onClose }) => {
         space-y-4
         absolute
         top-16
-        left-0
-        right-0
+        -right-4
         z-50
-        !translate-x-[-86%]
         rounded-t-3xl
         ${isVisible ? "overflow-auto" : "overflow-hidden"}
       `}
