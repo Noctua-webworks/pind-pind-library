@@ -9,12 +9,12 @@ export const metadata = {
 export default async function DonateMoneyPage() {
   // Static data (SSG) – you could fetch from a CMS or DB here if needed
   const bankDetails = {
-    bankName: 'State Bank of India',
+    bankName: 'ICICI BANK LIMITED',
     accountHolder: 'Pind Pind Library Foundation',
-    accountNumber: '123456789012',
-    ifsc: 'SBIN0001234',
-    branch: 'Main City Branch',
-    contactEmail: 'donate@pindpindlibrary.org',
+    accountNumber: '241505000702',
+    ifsc: 'ICIC0002415',
+    // branch: 'Main City Branch',
+    contactEmail: 'pindpindlibrary@gmail.com',
   };
 
   return (
@@ -32,7 +32,7 @@ export default async function DonateMoneyPage() {
         <p><strong>Account Holder Name:</strong> {bankDetails.accountHolder}</p>
         <p><strong>Account Number:</strong> {bankDetails.accountNumber}</p>
         <p><strong>IFSC Code:</strong> {bankDetails.ifsc}</p>
-        <p><strong>Branch:</strong> {bankDetails.branch}</p>
+        {/* <p><strong>Branch:</strong> {bankDetails.branch}</p> */}
       </div>
 
       <p className="mt-4 text-gray-600">
