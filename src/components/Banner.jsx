@@ -21,7 +21,7 @@ export function Banner() {
                 in Every Village!
               </h1>
               <p className="mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
-                Join us in creating libraries in religious places, making books
+                Join us in opening libraries in religious places, making books
                 accessible to everyone.
               </p>
 
