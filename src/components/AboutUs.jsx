@@ -141,7 +141,7 @@ export default function AboutUs() {
           className="container mx-auto text-center max-w-3xl"
         >
           <Image
-            src="/images/founder.jpeg"
+            src="/images/founder2.jpeg"
             width={150}
             height={150}
             alt="Sukhdev Singh Sandhu"
