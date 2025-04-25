@@ -141,11 +141,12 @@ export default function AboutUs() {
           className="container mx-auto text-center max-w-3xl"
         >
           <Image
-            src="/images/founder2.jpeg"
-            width={150}
-            height={150}
+            src="/images/founder3.jpeg"
+            width={250}
+            height={250}
             alt="Sukhdev Singh Sandhu"
-            className="mx-auto mb-6 rounded-full shadow-lg"
+            className="mx-auto mb-6 shadow-lg"
+            // className="mx-auto mb-6 rounded-full shadow-lg"
           />
           <h2 className="text-3xl font-bold text-[#58130a] mb-2">
             Sukhdev Singh Sandhu
